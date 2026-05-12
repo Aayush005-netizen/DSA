@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int SumN(int n){
+    if (n == 0) return 0;
+    return n + SumN (n - 1);
+}
+
+int main(){
+    int N = 5;
+    cout << (SumN(N));
+    return SumN(N);
+}
