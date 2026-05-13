@@ -1,0 +1,17 @@
+In hashing collison occurs when two different keys hash to the same index in the hash table.
+This can lead to data loss or incorrect retrieval of values.
+To handle collisions, various techniques have been developed, such as chaining (using linked lists or other data structures to store multiple values at the same index) and open addressing (finding another open slot in the hash table for the colliding key).
+Proper handling of collisions is crucial for maintaining the efficiency and correctness of a hash table.
+
+There is a method to achieve hashing called Division method.
+In this method, we take the key and divide it by the size of the hash table, and the remainder is used as the index for storing the value in the hash table.
+This method is simple and efficient for many applications, but it can lead to clustering (where groups of occupied slots form) if not implemented with a good choice of hash table size.
+For example there is an array of size 10 and we want to store the value 15, we will take 15 % 10 which gives us 5, so we will store the value at index 5 in the hash table.
+But if we want to store the value 25, we will also get 25 % 10 which gives us 5, so we will have a collision at index 5.
+Then we use chaining or open addressing to resolve the collision and store the value 25 at index 5 as well.
+But what if all the elements we want to store in the hash table give us the same index? This is called clustering, and it can lead to poor performance of the hash table.
+Hence the time complexity of the division method can degrade to O(n) in the worst case if there are many collisions, but with a good choice of hash table size and a good hash function, it can achieve an average time complexity of O(1) for insertions and lookups.
+
+The choice of the hash table size is important in the division method to minimize collisions.
+It is often recommended to use a prime number for the size of the hash table, as this can help distribute keys more uniformly and reduce the likelihood of collisions.
+Additionally, using a good hash function that distributes keys evenly across the hash table can further improve performance and reduce clustering.
