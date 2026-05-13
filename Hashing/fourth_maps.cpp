@@ -5,6 +5,8 @@
 // The time complexity of both implementations is O(n) for counting the frequencies, where n is the size of the input array. The retrieval of the frequency for a specific number (like 5) is O(log m) for the map and O(1) for the unordered map, where m is the number of unique elements in the array.
 // It is so because maps in C++ are typically implemented as balanced binary search trees (like Red-Black Trees), which have a logarithmic time complexity for search operations, while unordered maps are implemented as hash tables, which have an average constant time complexity for search operations.
 // Worst case happens in unordered maps when there are many collisions (i.e., multiple keys hash to the same index), which can degrade the performance to O(n) in the worst case. However, with a good hash function and proper resizing, this is generally not a concern in practice.
+// In map any data structure can be a key but in unordered map only hashable data structures can be a key. For example, in C++, you can use a pair as a key in a map, but you cannot use it as a key in an unordered map unless you provide a custom hash function for it. This is because unordered maps rely on hashing to store and retrieve keys efficiently, and not all data structures have built-in hash functions.
+
 
 #include<bits/stdc++.h>
 using namespace std;
