@@ -1,3 +1,14 @@
+// Merge Sort Algorithm
+// Time Complexity: O(n log n) in all cases (best, average, and worst)
+// Space Complexity: O(n) because of the temporary array used for merging
+// Merge sort is a divide-and-conquer algorithm that breaks down a list into several sublists until each sublist consists of a single element. Then, it merges those sublists in a manner that results in a sorted list. The algorithm can be described as follows:
+// 1. If the list is of length 0 or 1, it is already sorted. Return the list.
+// 2. Divide the list into two halves.
+// 3. Recursively sort both halves.
+// 4. Merge the two halves back together in a sorted manner.
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
