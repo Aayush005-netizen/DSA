@@ -5,6 +5,10 @@
 // 1. It is simple to implement and understand.
 // 2. It is efficient for small data sets or partially sorted arrays.
 // 3. It is an in-place sorting algorithm, meaning it requires only a constant amount of additional memory space.
+// Insertion sort works by dividing the array into a sorted and an unsorted part. It iteratively takes elements from the unsorted part and inserts them into the correct position in the sorted part. The algorithm can be described as follows:
+// 1. Start with the second element (index 1) as the key and compare it with the elements in the sorted part (to its left).
+// 2. If the key is smaller than the compared element, shift the compared element one position to the right.
+// 3. Repeat the comparison and shifting until the correct position for the key is found, then insert the key at that position.
 
 
 #include<bits/stdc++.h>
