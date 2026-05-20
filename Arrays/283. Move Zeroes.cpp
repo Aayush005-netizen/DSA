@@ -44,3 +44,27 @@ public:
         }
     }
 };
+
+
+
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int size = nums.size();
+        for(int i = 0; i < size; i++){
+            if(nums[i] == 0){
+                int z = i;
+                for(int j = z+1; j < size; j++){
+                    if(nums[j] != 0){
+                        nums[z] = nums[j];
+                        nums[j] = 0;
+                        break;
+                    }
+                }
+                if (nums[z] == 0){
+                    break;
+                }
+            }
+        }
+    }
+};
