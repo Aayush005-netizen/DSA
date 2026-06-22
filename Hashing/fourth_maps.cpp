@@ -30,5 +30,5 @@ int main(){
         mpp[arr[i]] += 1;
     }
     cout << mpp[5] << endl;  // prints 10
-    return 0;;
+    return 0;
 }
